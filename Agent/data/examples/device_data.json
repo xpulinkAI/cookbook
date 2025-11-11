@@ -1,0 +1,81 @@
+{
+  "device_id": "PUMP-001",
+  "device_name": "主水泵A",
+  "device_type": "离心泵",
+  "location": "车间1-A区",
+  "manufacturer": "施耐德电气",
+  "model": "SE-P3000",
+  "installation_date": "2020-03-15",
+  "last_maintenance": "2025-10-15",
+  "status": {
+    "operational_status": "running",
+    "alert_level": "warning"
+  },
+  "sensors": {
+    "temperature": {
+      "value": 85.5,
+      "unit": "°C",
+      "threshold_max": 80.0,
+      "threshold_critical": 90.0
+    },
+    "pressure": {
+      "value": 3.2,
+      "unit": "MPa",
+      "threshold_min": 2.8,
+      "threshold_max": 4.0
+    },
+    "vibration": {
+      "value": 2.8,
+      "unit": "mm/s",
+      "threshold_max": 2.5,
+      "threshold_critical": 4.0
+    },
+    "flow_rate": {
+      "value": 245.8,
+      "unit": "L/min",
+      "threshold_min": 200.0,
+      "threshold_max": 300.0
+    },
+    "power_consumption": {
+      "value": 45.2,
+      "unit": "kW",
+      "average": 42.0,
+      "threshold_max": 50.0
+    },
+    "motor_speed": {
+      "value": 2950,
+      "unit": "rpm",
+      "nominal": 3000,
+      "threshold_range": [2800, 3100]
+    }
+  },
+  "performance_metrics": {
+    "efficiency": 87.5,
+    "runtime_hours": 15420,
+    "cycles_completed": 328450,
+    "uptime_percentage": 98.2,
+    "mtbf_hours": 2340
+  },
+  "recent_alerts": [
+    {
+      "timestamp": "2025-11-10T14:23:15",
+      "type": "warning",
+      "message": "温度超过正常阈值"
+    },
+    {
+      "timestamp": "2025-11-10T09:45:32",
+      "type": "warning",
+      "message": "振动水平偏高"
+    },
+    {
+      "timestamp": "2025-11-09T16:12:08",
+      "type": "info",
+      "message": "功率消耗略有增加"
+    }
+  ],
+  "environmental_conditions": {
+    "ambient_temperature": 28.5,
+    "humidity": 65,
+    "ambient_pressure": 101.3
+  }
+}

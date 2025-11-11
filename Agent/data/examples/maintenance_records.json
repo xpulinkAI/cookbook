@@ -1,0 +1,272 @@
+[
+  {
+    "record_id": "MR-2025-089",
+    "device_id": "PUMP-001",
+    "date": "2025-10-15",
+    "type": "preventive",
+    "duration_hours": 4.5,
+    "technician": "张伟",
+    "description": "定期维护保养",
+    "work_performed": [
+      "更换机械密封",
+      "检查轴承状况",
+      "清洁冷却系统",
+      "润滑注油",
+      "校准传感器",
+      "性能测试"
+    ],
+    "parts_replaced": [
+      {
+        "part_name": "机械密封",
+        "part_number": "SEAL-3000-A",
+        "quantity": 1,
+        "cost": 850.0
+      },
+      {
+        "part_name": "O型圈",
+        "part_number": "O-RING-50",
+        "quantity": 3,
+        "cost": 45.0
+      }
+    ],
+    "total_cost": 1295.0,
+    "findings": "设备整体状况良好，轴承有轻微磨损但在可接受范围内",
+    "recommendations": "建议在下次保养时更换轴承",
+    "next_maintenance": "2025-11-25",
+    "status": "completed"
+  },
+  {
+    "record_id": "MR-2025-067",
+    "device_id": "PUMP-001",
+    "date": "2025-09-03",
+    "type": "corrective",
+    "duration_hours": 6.0,
+    "technician": "李强",
+    "description": "振动异常修复",
+    "work_performed": [
+      "诊断振动源",
+      "检查叶轮平衡",
+      "调整联轴器对中",
+      "紧固基础螺栓",
+      "振动测试",
+      "试运行"
+    ],
+    "parts_replaced": [
+      {
+        "part_name": "联轴器",
+        "part_number": "COUP-2500",
+        "quantity": 1,
+        "cost": 1250.0
+      }
+    ],
+    "total_cost": 2050.0,
+    "findings": "联轴器磨损导致对中不良，引起振动增加",
+    "recommendations": "加强日常振动监测",
+    "next_maintenance": "2025-10-15",
+    "status": "completed"
+  },
+  {
+    "record_id": "MR-2025-045",
+    "device_id": "PUMP-001",
+    "date": "2025-07-20",
+    "type": "preventive",
+    "duration_hours": 3.5,
+    "technician": "王芳",
+    "description": "季度定期检查",
+    "work_performed": [
+      "全面检查",
+      "清洁过滤器",
+      "检查电气连接",
+      "测试保护装置",
+      "更新运行记录",
+      "性能测试"
+    ],
+    "parts_replaced": [
+      {
+        "part_name": "进口过滤器",
+        "part_number": "FILTER-100",
+        "quantity": 2,
+        "cost": 180.0
+      }
+    ],
+    "total_cost": 680.0,
+    "findings": "设备运行正常，所有参数在标准范围内",
+    "recommendations": "继续按计划维护",
+    "next_maintenance": "2025-09-20",
+    "status": "completed"
+  },
+  {
+    "record_id": "MR-2025-023",
+    "device_id": "PUMP-001",
+    "date": "2025-05-12",
+    "type": "corrective",
+    "duration_hours": 8.0,
+    "technician": "张伟, 李强",
+    "description": "温度过高故障排除",
+    "work_performed": [
+      "故障诊断",
+      "拆解检查",
+      "清理冷却通道",
+      "更换冷却风扇",
+      "检查轴承润滑",
+      "重新组装",
+      "温度测试",
+      "长时间试运行"
+    ],
+    "parts_replaced": [
+      {
+        "part_name": "冷却风扇",
+        "part_number": "FAN-500",
+        "quantity": 1,
+        "cost": 420.0
+      },
+      {
+        "part_name": "轴承",
+        "part_number": "BEAR-6308",
+        "quantity": 2,
+        "cost": 680.0
+      },
+      {
+        "part_name": "润滑脂",
+        "part_number": "GREASE-HD",
+        "quantity": 1,
+        "cost": 85.0
+      }
+    ],
+    "total_cost": 2785.0,
+    "findings": "冷却系统堵塞导致散热不良，轴承润滑不足加剧发热",
+    "recommendations": "增加冷却系统检查频率，改进环境通风",
+    "next_maintenance": "2025-07-20",
+    "status": "completed"
+  },
+  {
+    "record_id": "MR-2025-008",
+    "device_id": "PUMP-001",
+    "date": "2025-03-28",
+    "type": "preventive",
+    "duration_hours": 4.0,
+    "technician": "王芳",
+    "description": "年度大保养",
+    "work_performed": [
+      "完整拆解检查",
+      "清洁所有部件",
+      "更换易损件",
+      "重新组装",
+      "全面测试",
+      "性能基准测试"
+    ],
+    "parts_replaced": [
+      {
+        "part_name": "机械密封",
+        "part_number": "SEAL-3000-A",
+        "quantity": 1,
+        "cost": 850.0
+      },
+      {
+        "part_name": "叶轮",
+        "part_number": "IMPEL-P3000",
+        "quantity": 1,
+        "cost": 2800.0
+      },
+      {
+        "part_name": "各类密封圈",
+        "part_number": "SEAL-KIT",
+        "quantity": 1,
+        "cost": 320.0
+      }
+    ],
+    "total_cost": 4970.0,
+    "findings": "叶轮有明显磨损和气蚀痕迹，影响效率",
+    "recommendations": "监控介质清洁度，考虑增加前置过滤",
+    "next_maintenance": "2025-05-28",
+    "status": "completed"
+  },
+  {
+    "record_id": "MR-2024-234",
+    "device_id": "PUMP-001",
+    "date": "2024-12-10",
+    "type": "corrective",
+    "duration_hours": 5.5,
+    "technician": "李强",
+    "description": "压力不稳定故障",
+    "work_performed": [
+      "压力系统诊断",
+      "检查阀门",
+      "清洁管路",
+      "更换压力传感器",
+      "系统调试",
+      "压力测试"
+    ],
+    "parts_replaced": [
+      {
+        "part_name": "压力传感器",
+        "part_number": "PS-3000",
+        "quantity": 1,
+        "cost": 650.0
+      },
+      {
+        "part_name": "止回阀",
+        "part_number": "VALVE-CV-50",
+        "quantity": 1,
+        "cost": 380.0
+      }
+    ],
+    "total_cost": 1630.0,
+    "findings": "压力传感器漂移，止回阀密封不良",
+    "recommendations": "定期校准传感器",
+    "next_maintenance": "2025-03-10",
+    "status": "completed"
+  },
+  {
+    "record_id": "MR-2024-198",
+    "device_id": "PUMP-001",
+    "date": "2024-10-05",
+    "type": "preventive",
+    "duration_hours": 3.0,
+    "technician": "张伟",
+    "description": "季度常规维护",
+    "work_performed": [
+      "常规检查",
+      "润滑保养",
+      "电气检查",
+      "性能测试"
+    ],
+    "parts_replaced": [],
+    "total_cost": 420.0,
+    "findings": "设备状态良好，无异常发现",
+    "recommendations": "继续正常运行",
+    "next_maintenance": "2024-12-05",
+    "status": "completed"
+  },
+  {
+    "record_id": "MR-2024-156",
+    "device_id": "PUMP-001",
+    "date": "2024-08-15",
+    "type": "corrective",
+    "duration_hours": 7.0,
+    "technician": "王芳, 李强",
+    "description": "电机过载保护动作",
+    "work_performed": [
+      "电气系统检查",
+      "电机绝缘测试",
+      "负载分析",
+      "清理电机",
+      "检查机械阻力",
+      "调整运行参数",
+      "负载测试"
+    ],
+    "parts_replaced": [
+      {
+        "part_name": "电机风扇罩",
+        "part_number": "COVER-M",
+        "quantity": 1,
+        "cost": 150.0
+      }
+    ],
+    "total_cost": 1250.0,
+    "findings": "电机散热不良导致温升过高触发保护，通风罩部分堵塞",
+    "recommendations": "加强环境清洁管理，定期清理通风系统",
+    "next_maintenance": "2024-10-15",
+    "status": "completed"
+  }
+]
