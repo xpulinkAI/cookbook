@@ -2,7 +2,7 @@
 
 **Build ChatGPT for your documents in minutes** - No embedding servers, no LLM hosting, just pure API magic! ✨
 
-Powered by [www.xpulink.net](https://www.xpulink.net)
+Powered by [www.xpulink.ai](https://www.xpulink.ai)
 
 ---
 
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 echo "XPU_API_KEY=your_api_key_here" > .env
 ```
 
-Get your key from [www.xpulink.net](https://www.xpulink.net) - it's free to start!
+Get your key from [www.xpulink.ai](https://www.xpulink.ai) - it's free to start!
 
 ### Run Your First Query
 
@@ -153,7 +153,7 @@ from pdf_rag_bge_m3 import BGEM3Embedding
 
 # Configure embeddings (XPULink hosted)
 Settings.embed_model = BGEM3Embedding(
-    api_base="https://www.xpulink.net/v1",
+    api_base="https://www.xpulink.ai/v1",
     model="bge-m3:latest",
     embed_batch_size=5
 )
@@ -162,7 +162,7 @@ Settings.embed_model = BGEM3Embedding(
 Settings.llm = LiteLLM(
     model="openai/qwen3-32b",
     api_key=api_key,
-    api_base="https://www.xpulink.net/v1",
+    api_base="https://www.xpulink.ai/v1",
     custom_llm_provider="openai"
 )
 
@@ -181,7 +181,7 @@ print(response)
 ```python
 # For unstable networks, reduce batch size
 Settings.embed_model = BGEM3Embedding(
-    api_base="https://www.xpulink.net/v1",
+    api_base="https://www.xpulink.ai/v1",
     model="bge-m3:latest",
     embed_batch_size=3  # Smaller batches = more stable
 )
@@ -419,7 +419,7 @@ SIMILARITY_TOP_K=3
 
 - **LlamaIndex Docs**: [docs.llamaindex.ai](https://docs.llamaindex.ai)
 - **BGE-M3 Paper**: [arXiv](https://arxiv.org/abs/2402.03216)
-- **XPULink Platform**: [www.xpulink.net](https://www.xpulink.net)
+- **XPULink Platform**: [www.xpulink.ai](https://www.xpulink.ai)
 - **LiteLLM Docs**: [docs.litellm.ai](https://docs.litellm.ai)
 
 ---
@@ -428,7 +428,7 @@ SIMILARITY_TOP_K=3
 
 Need help?
 - 📧 Email: support@xpulink.net
-- 🌐 Web: [www.xpulink.net](https://www.xpulink.net)
+- 🌐 Web: [www.xpulink.ai](https://www.xpulink.ai)
 - 💬 GitHub Issues: [Open an issue](https://github.com/...)
 
 ---
@@ -448,7 +448,7 @@ Need help?
 
 **Ready to build your document Q&A system?**
 
-Get your free API key at [www.xpulink.net](https://www.xpulink.net) and start in minutes! 🚀
+Get your free API key at [www.xpulink.ai](https://www.xpulink.ai) and start in minutes! 🚀
 
 ---
 

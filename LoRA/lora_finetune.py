@@ -25,7 +25,7 @@ load_dotenv()
 class XPULinkLoRAFineTuner:
     """XPULink LoRA 微调管理类"""
 
-    def __init__(self, api_key: Optional[str] = None, base_url: str = "https://www.xpulink.net/v1"):
+    def __init__(self, api_key: Optional[str] = None, base_url: str = "https://www.xpulink.ai/v1"):
         """
         初始化 LoRA 微调器
 

@@ -1,6 +1,6 @@
 # XPULink API Cookbook
 
-**Build powerful AI applications with zero infrastructure hassle** - A comprehensive collection of examples for [www.xpulink.net](https://www.xpulink.net) 🚀
+**Build powerful AI applications with zero infrastructure hassle** - A comprehensive collection of examples for [www.xpulink.ai](https://www.xpulink.ai) 🚀
 
 ## Why XPULink?
 
@@ -48,7 +48,7 @@ This cookbook provides production-ready examples for:
 ### Prerequisites
 
 - Python 3.8+
-- XPULink API Key from [www.xpulink.net](https://www.xpulink.net)
+- XPULink API Key from [www.xpulink.ai](https://www.xpulink.ai)
 
 ### Installation
 
@@ -73,7 +73,7 @@ response = completion(
     model="openai/qwen3-32b",
     messages=[{"role": "user", "content": "Hello!"}],
     api_key="your_api_key",
-    api_base="https://www.xpulink.net/v1",
+    api_base="https://www.xpulink.ai/v1",
     custom_llm_provider="openai"
 )
 
@@ -262,7 +262,7 @@ openbench evaluate \
   --model-type openai \
   --model-name qwen3-32b \
   --api-key $XPULINK_API_KEY \
-  --base-url https://www.xpulink.net/v1 \
+  --base-url https://www.xpulink.ai/v1 \
   --benchmark mmlu
 ```
 
@@ -314,7 +314,7 @@ response = completion(
     model="openai/qwen3-32b",
     messages=[...],
     api_key=api_key,
-    api_base="https://www.xpulink.net/v1",
+    api_base="https://www.xpulink.ai/v1",
     custom_llm_provider="openai"
 )
 ```
@@ -383,7 +383,7 @@ response = completion(
     model="openai/qwen3-32b",
     messages=[...],
     api_key=api_key,
-    api_base="https://www.xpulink.net/v1",
+    api_base="https://www.xpulink.ai/v1",
     custom_llm_provider="openai",
     num_retries=3  # Automatic retry on failure
 )
@@ -400,10 +400,10 @@ response = completion(
 ## 🤝 Support & Community
 
 ### Getting Help
-- 📚 **Documentation**: [www.xpulink.net/docs](https://www.xpulink.net/docs)
+- 📚 **Documentation**: [www.xpulink.ai/docs](https://www.xpulink.ai/docs)
 - 💬 **Issues**: Open an issue on GitHub
 - 📧 **Email**: support@xpulink.net
-- 🌐 **Website**: [www.xpulink.net](https://www.xpulink.net)
+- 🌐 **Website**: [www.xpulink.ai](https://www.xpulink.ai)
 
 ### Contributing
 We welcome contributions! Please:
@@ -434,7 +434,7 @@ MIT License - see LICENSE file for details
 
 ## 🚀 Ready to Build?
 
-1. **Get your API key**: [www.xpulink.net](https://www.xpulink.net)
+1. **Get your API key**: [www.xpulink.ai](https://www.xpulink.ai)
 2. **Pick an example**: Start with RAG or text generation
 3. **Run the code**: Copy, paste, customize
 4. **Ship to production**: Scale with confidence

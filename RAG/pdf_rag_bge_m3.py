@@ -325,7 +325,7 @@ def setup_rag_system(api_key: Optional[str] = None):
 
     # 配置 BGE-M3 Embedding 模型
     Settings.embed_model = BGEM3Embedding(
-        api_base="https://www.xpulink.net/v1",
+        api_base="https://www.xpulink.ai/v1",
         model="bge-m3:latest",
         embed_batch_size=5  # 减少批次大小提高稳定性
     )
@@ -334,7 +334,7 @@ def setup_rag_system(api_key: Optional[str] = None):
     Settings.llm = LiteLLM(
         model="openai/qwen3-32b",  # LiteLLM 格式: provider/model
         api_key=api_key,
-        api_base="https://www.xpulink.net/v1",
+        api_base="https://www.xpulink.ai/v1",
         temperature=0.7,
         custom_llm_provider="openai"  # 指定这是 OpenAI 风格的 API
     )
@@ -342,7 +342,7 @@ def setup_rag_system(api_key: Optional[str] = None):
     print("✅ LlamaIndex 配置完成（使用 LiteLLM）")
     print(f"  - Embedding 模型: {Settings.embed_model.model_name}")
     print(f"  - LLM 模型: qwen3-32b (via LiteLLM)")
-    print(f"  - API 端点: https://www.xpulink.net/v1")
+    print(f"  - API 端点: https://www.xpulink.ai/v1")
 
 
 def build_index(documents: List, show_estimation: bool = True):

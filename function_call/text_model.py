@@ -8,7 +8,7 @@ if not API_KEY:
 
 # 云端模型接口信息
 MODEL_NAME = "qwen3-32b"
-BASE_URL = "https://www.xpulink.net/v1/chat/completions"
+BASE_URL = "https://www.xpulink.ai/v1/chat/completions"
 
 # 构造请求头
 headers = {
