@@ -4,6 +4,8 @@ Qwen3-32B LoRA 微调示例
 本脚本展示如何使用 XPULink API 对 Qwen3-32B 模型进行 LoRA (Low-Rank Adaptation) 微调。
 LoRA 是一种参数高效的微调方法,可以用较少的计算资源对大型语言模型进行定制化训练。
 
+使用 LiteLLM 提供统一的 LLM 接口，优雅地支持自定义模型 API。
+
 作者: XPULink
 日期: 2025-01
 """
@@ -14,6 +16,7 @@ import requests
 import time
 from typing import List, Dict, Optional
 from dotenv import load_dotenv
+from litellm import completion
 
 # 加载环境变量
 load_dotenv()
@@ -22,7 +25,7 @@ load_dotenv()
 class XPULinkLoRAFineTuner:
     """XPULink LoRA 微调管理类"""
 
-    def __init__(self, api_key: Optional[str] = None, base_url: str = "https://www.xpulink.ai/v1"):
+    def __init__(self, api_key: Optional[str] = None, base_url: str = "https://www.xpulink.net/v1"):
         """
         初始化 LoRA 微调器
 
@@ -77,7 +80,7 @@ class XPULinkLoRAFineTuner:
         Returns:
             file_id: 上传后的文件 ID
         """
-        url = f"{self.base_url}/files"
+        url = f"{self.base_url}/v1/files"
 
         with open(file_path, 'rb') as f:
             files = {
@@ -170,7 +173,7 @@ class XPULinkLoRAFineTuner:
         Returns:
             任务状态信息
         """
-        url = f"{self.base_url}/fine_tuning/jobs/{job_id}"
+        url = f"{self.base_url}/v1/fine_tuning/jobs/{job_id}"
 
         response = requests.get(url, headers=self.headers, timeout=30)
 
@@ -223,7 +226,7 @@ class XPULinkLoRAFineTuner:
         Returns:
             微调任务列表
         """
-        url = f"{self.base_url}/fine_tuning/jobs?limit={limit}"
+        url = f"{self.base_url}/v1/fine_tuning/jobs?limit={limit}"
 
         response = requests.get(url, headers=self.headers, timeout=30)
 
@@ -234,34 +237,34 @@ class XPULinkLoRAFineTuner:
 
     def test_finetuned_model(self, model_name: str, test_prompt: str, max_tokens: int = 200):
         """
-        测试微调后的模型
+        测试微调后的模型（使用 LiteLLM）
 
         Args:
             model_name: 微调模型名称
             test_prompt: 测试提示词
             max_tokens: 最大生成 token 数
         """
-        url = f"{self.base_url}/chat/completions"
+        try:
+            # 使用 LiteLLM 调用模型
+            response = completion(
+                model=f"openai/{model_name}",  # LiteLLM 格式
+                messages=[
+                    {"role": "user", "content": test_prompt}
+                ],
+                api_key=self.api_key,
+                api_base=self.base_url,
+                custom_llm_provider="openai",  # 指定 OpenAI 风格 API
+                max_tokens=max_tokens,
+                temperature=0.7,
+                timeout=60
+            )
 
-        payload = {
-            "model": model_name,
-            "messages": [
-                {"role": "user", "content": test_prompt}
-            ],
-            "max_tokens": max_tokens,
-            "temperature": 0.7
-        }
+            content = response.choices[0].message.content
+            print(f"🤖 模型回答:\n{content}")
+            return content
 
-        response = requests.post(url, headers=self.headers, json=payload, timeout=60)
-
-        if response.status_code != 200:
-            raise Exception(f"模型调用失败: {response.text}")
-
-        result = response.json()
-        content = result["choices"][0]["message"]["content"]
-
-        print(f"🤖 模型回答:\n{content}")
-        return content
+        except Exception as e:
+            raise Exception(f"模型调用失败: {str(e)}")
 
 
 def example_basic_usage():
@@ -295,7 +298,7 @@ def example_basic_usage():
     # 保存训练数据
     data_file = finetuner.prepare_training_data(
         training_data,
-        "LoRA/data/training_data.jsonl"
+        "medical_qa_training.jsonl"
     )
 
     # 3. 上传训练文件
@@ -371,5 +374,5 @@ if __name__ == "__main__":
     """)
 
     # 取消注释以运行示例
-    # example_basic_usage()
+    example_basic_usage()
     # example_check_existing_jobs()

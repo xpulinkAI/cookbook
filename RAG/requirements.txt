@@ -1,0 +1,41 @@
+# RAG (检索增强生成) 项目依赖
+# 适用于 pdf_rag_bge_m3.py 和相关 Notebook
+
+# LlamaIndex 核心框架和组件
+llama-index-core>=0.12.0
+
+# LiteLLM - 统一 LLM 接口，优雅支持自定义 API
+llama-index-llms-litellm>=0.3.0
+litellm>=1.0.0
+
+# OpenAI（LiteLLM 需要）
+openai>=1.0.0
+
+# PDF 文档处理
+pypdf>=3.0.0
+
+# HTTP 请求库
+requests>=2.25.0
+
+# 环境变量管理
+python-dotenv>=1.0.0
+
+# Jupyter Notebook 支持（可选，仅用于运行 .ipynb 文件）
+jupyter>=1.0.0
+notebook>=6.4.0
+ipykernel>=6.9.0
+
+# 文档读取支持
+llama-index-readers-file>=0.3.0
+
+# 异步支持
+aiohttp>=3.8.0
+
+# 类型注解支持
+typing-extensions>=4.3.0
+
+# 数据处理（可选，用于高级功能）
+numpy>=1.21.0
+
+# 输出格式化（可选）
+pprintpp>=0.4.0

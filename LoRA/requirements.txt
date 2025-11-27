@@ -1,0 +1,13 @@
+# LoRA 微调项目依赖
+
+# LiteLLM - 统一 LLM 接口，优雅支持自定义 API
+litellm>=1.0.0
+openai>=1.0.0
+
+# 基础依赖
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Streamlit UI（可选）
+streamlit>=1.31.0
+pandas>=2.0.0

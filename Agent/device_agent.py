@@ -36,7 +36,7 @@ class DeviceMonitorAgent:
             raise ValueError("请提供 API Key 或在环境变量中设置 XPULINK_API_KEY")
 
         self.model = model
-        self.base_url = "https://www.xpulink.ai/v1/chat/completions"
+        self.base_url = "https://www.xpulink.net/v1/chat/completions"
         self.headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json"
